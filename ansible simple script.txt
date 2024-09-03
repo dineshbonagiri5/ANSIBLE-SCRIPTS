@@ -1,0 +1,8 @@
+---
+- hosts: group1
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: i am installing git
+      action: yum name=git state=present
