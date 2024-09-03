@@ -1,0 +1,13 @@
+---
+- hosts: group1
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: Insall git
+      yum: name=git state=present
+
+    - name: gather code
+      git:
+         repo: 'https://github.com/dineshbonagiri5/dicet_tv.git'
+         dest: /opt/dinesh
