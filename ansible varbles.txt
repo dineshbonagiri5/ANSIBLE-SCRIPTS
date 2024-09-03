@@ -1,0 +1,13 @@
+---
+- hosts: group1
+  become: yes
+  connection: ssh
+    
+    
+  vars:
+     - dinesh: maven
+     
+  tasks:
+      - name: install maven
+        action: yum name=' {{dinesh}} ' state=present
+         
