@@ -1,0 +1,19 @@
+---
+- hosts: group1
+  become: yes
+  connection: ssh
+  tasks:
+  - name: installing git
+    action: yum name=git state=present
+    tags: abc
+  
+  - name: installing maven
+    action: yum name=maven state=present
+    tags: bbc
+    
+  - name: installing httpd
+    action: yum name=httpd state=present
+    tags: dev
+  
+  
+  
